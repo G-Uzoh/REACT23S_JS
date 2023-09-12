@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:wght@400;500;600&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Handlee:wght@400;500;600&display=swap");
+
+:root {
+    --green: #177217;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    font-size: 16px;
+    
+}
+
+body {
+    background-color: silver;
+    padding: 0 20px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    align-items: center;
+    background-color: var(--green);
+    color: white;
+    width: 100vw;
+    padding: 7px;
+    border-bottom: 1px solid white;
+}
+
+i {
+    font-size: 2rem;
+    margin-left: 7px;
+    margin-right: 20px;
+}
+
+h1 {
+    font-family: 'Handlee', cursive;
+}
+
+h4 {
+    margin-bottom: 5px;
+}
+
+/* Main content styles */
+
+.content-wrap {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    margin: 50px auto;
+    padding: 20px;
+    width: 90vw;
+    border: 1px solid var(--green);
+    border-radius: 10px;
+}
+
+#delicious {
+    font-family: handwriting;
+    font-style: italic;
+}
+
+.info-wrap,
+.size-wrap,
+.toppings {
+    margin: 10px 0;
+}
+
+.info-wrap input {
+    font-family: inherit;
+    font-size: inherit;
+    border: 1px solid var(--green);
+    border-radius: 2px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.info-wrap label,
+.info-wrap input {
+    width: 200px;
+}
+
+#pizza-size {
+    /* display: flex; */
+}
+
+.toppings {
+    border: 1px solid var(--green);
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.cheeses,
+.meat,
+.veggie,
+.fruits {
+    border-top: 1px dotted var(--green);
+}
+
+.size-wrap form input,
+.toppings form input {
+    color: var(--green);
+}
+
+select {
+    border: 1px solid var(--green);
+    border-radius: 2px;
+}
+
+/* Price display styles */
+.price-update {
+    background-color: white;
+    color: var(--green);
+    height: 70px;
+    width: 70px;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid var(--green);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 2px;
+}
+
+#price {
+    margin-right: 5px;
+}
+
+/* Button styles */
+button {
+    background-color: var(--green);
+    color: white;
+    margin: 10px auto;
+    padding: 10px;
+    width: 150px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--green);
+    width: 100vw;
+    height: 100%;
+    margin-top: 100px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    border-top: 1px solid white;
+}
+
+/* Responsive styles - applies to larger screens */
+@media (min-width: 768px) {
+    body {
+        background-image: url('./img/pizza.webp');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        font-size: 1.2rem;
+    }
+
+    .content-wrap {
+        width: 60vw;
+    }
+
+    .price-update {
+        height: 100px;
+        width: 100px;
+        margin: 10px auto;
+        font-size: 1.4rem;
+    }
+}
