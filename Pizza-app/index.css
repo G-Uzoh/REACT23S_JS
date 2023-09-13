@@ -33,6 +33,11 @@ body {
     align-items: center;
 }
 
+/* Shared utility styles */
+.green {
+    color: var(--green);
+}
+
 /* Header styles */
 header {
     display: flex;
@@ -78,28 +83,40 @@ h4 {
     font-style: italic;
 }
 
-.info-wrap,
-.size-wrap,
+.info,
+.size,
 .toppings {
     margin: 10px 0;
+    padding: 5px;
 }
 
-.info-wrap input {
+.info label,
+.info input {
+    display: inline-block;
+    width: 100px;
+}
+
+.info input {
     font-family: inherit;
     font-size: inherit;
     border: 1px solid var(--green);
     border-radius: 2px;
     padding: 5px;
     margin: 5px;
+    width: 250px;
 }
 
-.info-wrap label,
-.info-wrap input {
-    width: 200px;
+input[type='radio'],
+input[type='checkbox'] {
+    accent-color: var(--green);
 }
 
 #pizza-size {
     /* display: flex; */
+}
+
+.description {
+    font-size: 0.875rem;
 }
 
 .toppings {
@@ -115,11 +132,7 @@ h4 {
     border-top: 1px dotted var(--green);
 }
 
-.size-wrap form input,
-.toppings form input {
-    color: var(--green);
-}
-
+input[type='text'],
 select {
     border: 1px solid var(--green);
     border-radius: 2px;
@@ -190,6 +203,15 @@ footer {
 
     .content-wrap {
         width: 60vw;
+    }
+
+    .size,
+    .cheeses,
+    .meat,
+    .veggie,
+    .fruits {
+        display: grid;
+        grid-template-columns: repeat(2, 230px);
     }
 
     .price-update {
