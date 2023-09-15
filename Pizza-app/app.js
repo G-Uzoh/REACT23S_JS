@@ -1,6 +1,5 @@
 // Selects all inputs to listen to.
 const formItems = document.querySelector('form');
-
 const customer = document.querySelector('#name');
 const address = document.querySelector('#address');
 const sizes = document.querySelectorAll('input[name=size]');
@@ -42,6 +41,7 @@ const getTotalPizzaPrice = () => {
     // Gets selected delivery method.
     if (deliveryOption === 'home') price += 5;
 
+    // Displays total price to the customer in real time.
     priceDisplay.textContent = price;
     return price;
 
@@ -50,13 +50,15 @@ const getTotalPizzaPrice = () => {
 // Adds event listener to the form.
 formItems.addEventListener('change', getTotalPizzaPrice);
 
-
+// Function to print the summary of the customer's order.
 const getOrderSummary = () => {
+    // Global variables in function scope to access their values.
     const customerName = customer.value;
     const addressInfo = address.value;
     let sizeId = '';
     const allToppings = [];
     const deliveryType = deliveryMethod.options[deliveryMethod.selectedIndex].value;
+    const summary = document.querySelector('.summary');
     
     customerInfo.textContent = `Customer: ${customerName}`;
     customerAddress.textContent = `Address: ${addressInfo}`;
@@ -77,7 +79,10 @@ const getOrderSummary = () => {
 
     // Price.
     totalPrice.textContent = `Price: ${getTotalPizzaPrice()} €`;
+
+    // Removes the hidden class applied to the summary container and reveals the customer's order summary.
+    summary.classList.remove('hidden');
 }
 
-
+// Add event listener to the button.
 orderButton.addEventListener('click', getOrderSummary);

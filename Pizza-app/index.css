@@ -38,6 +38,10 @@ body {
     color: var(--green);
 }
 
+.hidden {
+    display: none;
+}
+
 /* Header styles */
 header {
     display: flex;
@@ -111,31 +115,46 @@ input[type='checkbox'] {
     accent-color: var(--green);
 }
 
-#pizza-size {
-    /* display: flex; */
-}
-
 .description {
     font-size: 0.875rem;
 }
 
+.size {
+    border-bottom: 1px solid var(--green);
+    margin-bottom: 10px;
+}
+
 .toppings {
-    border: 1px solid var(--green);
+    border-bottom: 1px solid var(--green);
     border-radius: 3px;
-    padding: 5px;
 }
 
 .cheeses,
 .meat,
-.veggie,
-.fruits {
-    border-top: 1px dotted var(--green);
+.veggie {
+    border-bottom: 1px dotted var(--green);
+    margin-top: 10px;
+}
+
+h4 {
+    margin-top: 10px;
+    color: var(--green);
+}
+
+.delivery-option {
+    margin: 10px auto;
+    border-bottom: 1px solid var(--green);
+    padding: 10px 0 10px 0;
 }
 
 input[type='text'],
 select {
     border: 1px solid var(--green);
     border-radius: 2px;
+    font-size: inherit;
+    font-family: inherit;
+    padding: 5px;
+    margin: 5px auto;
 }
 
 /* Price display styles */
@@ -179,6 +198,23 @@ button:hover {
     opacity: 0.9;
 }
 
+/* Order summary styles */
+.thanks {
+    margin-bottom: 5px;
+}
+
+#customer,
+#customer-address,
+#size,
+#toppings,
+#delivery-option {
+    margin-bottom: 5px;
+}
+
+#total {
+    font-weight: bold;
+}
+
 /* Footer styles */
 footer {
     background-color: var(--green);
@@ -198,11 +234,11 @@ footer {
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .content-wrap {
-        width: 60vw;
+        width: 70vw;
     }
 
     .size,

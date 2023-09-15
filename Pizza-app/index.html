@@ -25,9 +25,6 @@
       <h1>Awesome Pizza</h1>
     </header>
     <main>
-      <!-- Background image -->
-      <div class="pizza-logo"></div>
-
       <!-- Main content -->
       <div class="content-wrap">
         <p>
@@ -175,7 +172,6 @@
 
           <div class="delivery-option">
             <h3 class="green">Delivery option</h3>
-            <p>How would you like your order to be delivered?</p>
             <select name="delivery" id="delivery">
               <option selected disabled value="empty">
                 --Choose delivery method--
@@ -186,6 +182,8 @@
             </select>
           </div>
         </form>
+        <!-- Order completion button -->
+        <button>Order</button>
 
         <!-- Price display -->
         <div class="price-update">
@@ -193,13 +191,12 @@
           <span>€</span>
         </div>
 
-        <!-- Order completion button -->
-        <button>Order</button>
-        <div class="order-details"></div>
-
         <!-- Order Summary-->
-        <div class="summary">
+        <div class="summary hidden">
           <h2 class="green">Order summary</h2>
+          <p class="thanks">
+            Thanks for your patronage. Below is a summary of your order.
+          </p>
           <p id="customer"></p>
           <p id="customer-address"></p>
           <p id="size"></p>
