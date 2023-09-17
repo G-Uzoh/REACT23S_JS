@@ -16,6 +16,7 @@ const totalPrice = document.querySelector('#total');
 
 // Function that computes the total price based on inputs selected.
 const getTotalPizzaPrice = () => {
+    
     // Initial base and extra fees.
     let sizeId = '';
     let toppingsList = [];
@@ -27,10 +28,10 @@ const getTotalPizzaPrice = () => {
         if (size.checked) sizeId = size.id;
     }
 
-    if (sizeId === 'small') price += 7.5;
-    else if (sizeId === 'medium') price += 10.5;
-    else if (sizeId === 'large') price += 12.5;
-    else if (sizeId === 'extra-large') price += 15.5;
+    if (sizeId === 'two') price += 7.5;
+    else if (sizeId === 'four') price += 10.5;
+    else if (sizeId === 'six') price += 12.5;
+    else if (sizeId === 'eight') price += 15.5;
 
     // Gets selected topping(s) from the toppings list.
     toppings.forEach(topping => {

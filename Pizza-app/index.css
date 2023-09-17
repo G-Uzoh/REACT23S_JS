@@ -101,6 +101,13 @@ h4 {
 }
 
 .info input {
+.info-wrap,
+.size-wrap,
+.toppings {
+    margin: 10px 0;
+}
+
+.info-wrap input {
     font-family: inherit;
     font-size: inherit;
     border: 1px solid var(--green);
@@ -129,6 +136,21 @@ input[type='checkbox'] {
     border-radius: 3px;
 }
 
+.info-wrap label,
+.info-wrap input {
+    width: 200px;
+}
+
+#pizza-size {
+    /* display: flex; */
+}
+
+.toppings {
+    border: 1px solid var(--green);
+    border-radius: 3px;
+    padding: 5px;
+}
+
 .cheeses,
 .meat,
 .veggie {
@@ -155,6 +177,20 @@ select {
     font-family: inherit;
     padding: 5px;
     margin: 5px auto;
+
+.veggie,
+.fruits {
+    border-top: 1px dotted var(--green);
+}
+
+.size-wrap form input,
+.toppings form input {
+    color: var(--green);
+}
+
+select {
+    border: 1px solid var(--green);
+    border-radius: 2px;
 }
 
 /* Price display styles */
@@ -248,6 +284,11 @@ footer {
     .fruits {
         display: grid;
         grid-template-columns: repeat(2, 230px);
+        font-size: 1.2rem;
+    }
+
+    .content-wrap {
+        width: 60vw;
     }
 
     .price-update {
