@@ -56,7 +56,7 @@ const calculateRiskScore = () => {
 form.addEventListener('change', calculateRiskScore);
 
 // Display summary and populate field.
-const getInsurancQuote = () => {
+const getInsuranceQuote = () => {
     // Get form input values.
     const customerFullName = customerName.value;
     const newCustomerAge = customerAge.value
@@ -88,4 +88,4 @@ const getInsurancQuote = () => {
 }
 
 // Add event listener to button.
-button.addEventListener('click', getInsurancQuote);
+button.addEventListener('click', getInsuranceQuote);
