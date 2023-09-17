@@ -23,13 +23,10 @@
               <li><a href="#">Request insurance</a></li>
             </div>
             <div>
-              <li><a href="#">Products</a></li>
+              <li><a href="#">Claims</a></li>
             </div>
             <div>
-              <li><a href="#">File a claim</a></li>
-            </div>
-            <div>
-              <li><a href="#">Service & Contact</a></li>
+              <li><a href="#">Contact</a></li>
             </div>
           </ul>
         </nav>
@@ -38,9 +35,11 @@
       <main>
         <div class="content">
           <h2>Insurance application form</h2>
-          <div class="customer-info">
-            <h3>Customer information</h3>
-            <form id="customer-info">
+
+          <h3>Customer information</h3>
+
+          <form>
+            <div>
               <label for="name">Full name:</label>
               <input
                 type="text"
@@ -48,6 +47,8 @@
                 id="name"
                 placeholder="Enter your name"
               />
+            </div>
+            <div>
               <label for="age">Age:</label>
               <input
                 type="number"
@@ -55,11 +56,11 @@
                 id="age"
                 placeholder="Enter your age"
               />
-            </form>
-          </div>
-          <div class="health-status">
-            <h3>Health status</h3>
-            <form id="health-status">
+            </div>
+
+            <div class="health-status">
+              <h3>Health status</h3>
+
               <label for="hypertension"
                 ><input type="checkbox" name="health" id="hypertension" />
                 Hypertension</label
@@ -75,13 +76,12 @@
                   id="overweight"
                 />Overweight</label
               >
-            </form>
-          </div>
-          <div class="habits">
-            <h3>Health habits</h3>
-            <div class="healthy-habits">
-              <h4>Good habits:</h4>
-              <form id="healthy">
+            </div>
+            <div class="habits">
+              <h3>Healthy habits</h3>
+              <div class="healthy-habits">
+                <h4>Good habits:</h4>
+
                 <label for="exercise"
                   ><input type="checkbox" name="habits" id="exercise" />Regular
                   exercise</label
@@ -112,11 +112,10 @@
                     id="non-smoking"
                   />Non-smoking</label
                 >
-              </form>
-            </div>
-            <div class="unhealthy-habits">
-              <h4>Unhealthy habits:</h4>
-              <form id="unhealthy">
+              </div>
+              <div class="unhealthy-habits">
+                <h4>Unhealthy habits:</h4>
+
                 <label for="smoking"
                   ><input
                     type="checkbox"
@@ -152,11 +151,23 @@
                     id="inadequate-sleep"
                   />Inadequate sleep</label
                 >
-              </form>
+              </div>
             </div>
-          </div>
+          </form>
+          <button>Get a quote</button>
         </div>
-        <section class="side-view">
+        <section class="quote hidden">
+          <h2>Calculated risk score</h2>
+          <p>
+            Thank you for filling out the form. Below is a summary of your
+            insurance details and risk score based on the information you
+            provided:
+          </p>
+          <p id="customer-name"></p>
+          <p id="customer-age"></p>
+          <p id="customer-health-status"></p>
+          <p id="customer-healthy-habits"></p>
+          <p id="customer-unhealthy-habits"></p>
           <p id="score"></p>
         </section>
       </main>

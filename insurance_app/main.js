@@ -1,153 +1,91 @@
-// document.addEventListener('DOMContentLoaded', function() {
-// const healthStatus = document.getElementById('health-status');
-// const healthyHabit = document.getElementById('healthy');
-// const unhealthyHabit = document.getElementById('unhealthy');
-// const customerAge = document.querySelector('#customer-info input[type=number]');
-// const score = document.querySelector('#score');
-// // const totalPrice = document.getElementById('price');
-
-// // console.log(healthStatus);
-// console.log(healthyHabit);
-// // console.log(unhealthyHabit);
-// // console.log(customerAge);
-// // console.log(score);
-
-
-// function getRiskScore() {
-    
-//     console.log(parseFloat(getScoreByHealthStatus()))
-
-//     // const pizzaTopping = parseFloat(getPizzaTopping(topping)) || 0;
-
-//     // const delivery = parseFloat(getDeliveryOption(deliveryOption)) || 0;
-
-//     // const total = pizzaSize + pizzaTopping + delivery;
-
-//     // totalPrice.textContent = `${total} €`;
-
-
-//     // console.log(getScoreByAge() + getScoreByHealthStatus() + getHealthyHabitScore() + getUnhealthyHabitScore());
-// }
-
-
-
-
-// function getScoreByAge() {
-//     const age = customerAge.value;
-//     // console.log(age)
-//     let riskScore;
-//     let baseScore = 500;
-
-//     if (age < 18) return riskScore = baseScore;
-//     else if (age < 26) return riskScore = baseScore + (baseScore * 0.1);
-//     else if (age < 36) return riskScore = baseScore + (baseScore * 0.3);
-//     else if (age < 46) return riskScore = baseScore + (baseScore * 0.6);
-//     else if (age < 56) return riskScore = baseScore * 2;
-//     else if (age < 66) return riskScore = baseScore + (baseScore * 1.5);
-//     else return riskScore = baseScore + (baseScore * 2.1);
-//     // console.log(age)
-//     // console.log(riskScore)
-//     // return riskScore;
-// }
-// // getScoreByAge();
-
-let riskScore = 0;
-const baseScore = 500;
-
-
-
-
-function getScoreByAge() {
-
-    const customerAge = age.value;
-    if (customerAge >= 0 && customerAge < 18) console.log(riskScore = baseScore);
-    else if (customerAge >= 18 && customerAge < 26) console.log(riskScore = baseScore + (baseScore * 0.1));
-    else if (customerAge >= 26 && customerAge < 36) console.log(riskScore = baseScore + (baseScore * 0.3));
-    else if (customerAge >= 36 && customerAge < 46) console.log(riskScore = baseScore + (baseScore * 0.6));
-    else if (customerAge >= 46 && customerAge < 56) console.log(riskScore = baseScore * 2);
-    else if (customerAge >= 56 && customerAge < 66) console.log(riskScore = baseScore + (baseScore * 1.5));
-    else console.log(riskScore = baseScore + (baseScore * 2.1));
-    // console.log(age)
-    // console.log(riskScore)
-    // return riskScore;
-    // console.log(riskScore);
-}
-
-function getScoreByHealthStatus(event) {
-    const riskScore1 = baseScore * 0.01;
-    console.log(riskScore1)
-
-    if (event.target.checked) riskScore += riskScore1;
-    else riskScore -= riskScore1;
-    console.log(riskScore)
-    
-    // console.log(parseFloat(riskScore));
-}
-// getScoreByHealthStatus();
-
-
-function getHealthyHabitScore(event) {
-    let riskScore5 = baseScore * 0.05;
-
-    if (event.target.checked) riskScore += riskScore5;
-    else riskScore -= riskScore5;
-
-    console.log(riskScore);
-}
-// // getHealthyHabitScore();
-
-
-function getUnhealthyHabitScore(event) {
-
-    let riskScoreMinus5 = baseScore * 0.05;
-    if (event.target.checked) riskScore -= riskScoreMinus5;
-    else riskScore += riskScoreMinus5;    
-
-   
-    // riskScore += baseScore.toFixed(2);
-    // console.log(parseFloat(riskScore));
-    // return parseFloat(riskScore);
-    console.log(riskScore);
-}
-// // getUnhealthyHabitScore();
-
-// // healthStatus.addEventListener('change', getScoreByHealthStatus);
-// healthyHabit.addEventListener('change', getHealthyHabitScore);
-// unhealthyHabit.addEventListener('change', getUnhealthyHabitScore);
-// customerAge.addEventListener('change', getScoreByAge);
-
-// getRiskScore();
-// });
-
-
-
-// // function getRiskScore() {
-// //     const pizzaSize = parseFloat(getPizzaSize(size)) || 0;
-
-// //     const pizzaTopping = parseFloat(getPizzaTopping(topping)) || 0;
-
-// //     const delivery = parseFloat(getDeliveryOption(deliveryOption)) || 0;
-
-// //     const total = pizzaSize + pizzaTopping + delivery;
-
-// //     totalPrice.textContent = `${total} €`;
-
-// // }
-
-const age = document.getElementById('age');
-
-age.addEventListener('blur', getScoreByAge)
-
-const healthConditions = document.getElementsByName('health');
-
-healthConditions.forEach(condition => condition.addEventListener('click', getScoreByHealthStatus));
-
-
-const healthyHabits = document.getElementsByName('habits');
-
-healthyHabits.forEach(healthyHabit => healthyHabit.addEventListener('click', getHealthyHabitScore));
-
+// Selecting form inputs
+const form = document.querySelector('form');
+const customerName = document.querySelector('#name');
+const customerAge = document.querySelector('#age');
+const healthStatus = document.querySelectorAll('input[name=health]');
+const healthyHabits = document.querySelectorAll('input[name=habits]');
 const unhealthyHabits = document.querySelectorAll('input[name=unhealthy-habits]');
+const button = document.querySelector('button');
 
-unhealthyHabits.forEach(unhealthyHabit => unhealthyHabit.addEventListener('click', getUnhealthyHabitScore));
+// Summary target elements.
+const fullName = document.querySelector('#customer-name');
+const ageOfCustomer = document.querySelector('#customer-age');
+const customerHealth = document.querySelector('#customer-health-status');
+const healthyStatus = document.querySelector('#customer-healthy-habits');
+const unhealthyStatus = document.querySelector('#customer-unhealthy-habits');
+const aggregateScore = document.querySelector('#score');
+const summary = document.querySelector('.quote');
 
+// Function to calculate cusotmer's risk score.
+const calculateRiskScore = () => {
+    // Define global variables in function scope to access their values.
+    const age = customerAge.value;
+    
+    // Initialize base score.
+    const baseScore = 500;
+    let riskScore = 0;
+
+    // Get risk score by age.
+    age < 18 ? riskScore += baseScore
+        : age < 26 ? riskScore += baseScore + (baseScore * 0.1)
+        : age < 36 ? riskScore += baseScore + (baseScore * 0.3)
+        : age < 46 ? riskScore += baseScore + (baseScore * 0.6)
+        : age < 56 ? riskScore += baseScore * 2
+        : age < 66 ? riskScore += baseScore + (baseScore * 1.5)
+        : riskScore += baseScore + (baseScore * 2.1);
+    
+    // Get risk score by health status.
+    healthStatus.forEach(condition => {
+        if (condition.checked) riskScore += baseScore * 0.01;
+    });
+
+    // Reduce risk score by 5% of base score for healthy habits.
+    for (const healthyHabit of healthyHabits) {
+        if (healthyHabit.checked) riskScore -= baseScore * 0.05;
+    }
+
+    // Increase risk score by 5% of base score for unhealthy habits.
+    for (const unhealthyHabit of unhealthyHabits) {
+        if (unhealthyHabit.checked) riskScore += baseScore * 0.05;
+    }
+
+    return riskScore;
+}
+
+// Add event listener to the form.
+form.addEventListener('change', calculateRiskScore);
+
+// Display summary and populate field.
+const getInsurancQuote = () => {
+    // Get form input values.
+    const customerFullName = customerName.value;
+    const newCustomerAge = customerAge.value
+    const healthCondition = [];
+    const customerHealthyHabits = [];
+    const customerUnhealthyHabits = [];
+
+    for (const healthCond of healthStatus) {
+        if (healthCond.checked) healthCondition.push(healthCond.id);
+    }
+
+    for (const habit of healthyHabits) {
+        if (habit.checked) customerHealthyHabits.push(habit.id);
+    }
+
+    for (const unhealthyHabit of unhealthyHabits) {
+        if (unhealthyHabit.checked) customerUnhealthyHabits.push(unhealthyHabit.id);
+    }
+
+    fullName.textContent = `Full name: ${customerFullName}`;
+    ageOfCustomer.textContent = `Age: ${newCustomerAge}`;
+    customerHealth.textContent = `Health status: ${healthCondition.join(', ')}`;
+    healthyStatus.textContent = `Healthy habits: ${customerHealthyHabits.join(', ')}`;
+    unhealthyStatus.textContent = `Unhealthy habits: ${customerUnhealthyHabits.join(', ')}`;
+    aggregateScore.textContent = `Risk score: ${calculateRiskScore()}`;
+
+    // Unhide summary container.
+    summary.classList.remove('hidden');
+}
+
+// Add event listener to button.
+button.addEventListener('click', getInsurancQuote);

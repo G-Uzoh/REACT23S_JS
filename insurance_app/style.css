@@ -29,7 +29,7 @@ body {
 
 /* Shared utility styles */
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 /* Header styles */
@@ -39,8 +39,6 @@ header {
     width: 100vw;
     padding: 10px;
 }
-
-
 
 a {
     color: #333;
@@ -52,6 +50,23 @@ form {
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
+}
+
+/* Button styles */
+button {
+    background-color: steelblue;
+    color: white;
+    margin: 10px auto;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.9;
 }
 
 /* Footer styles */
@@ -97,28 +112,22 @@ footer {
 
     main {
         display: flex;
+        flex-direction: column;
+        align-items: center;
         background-color: white;
     }
 
     /* Main content styles */
     .content {
-        flex-basis: 65%;
-        background-color: green;
+        width: 70%;
         margin-right: 5px;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        border: 1px solid black;
     }
 
-    .side-view {
-        flex-basis: 35%;
-        background-color: red;
-        margin-left: 5px;
-        border-left: 1px solid black;
-    }
-
-    .content,
-    .side-view {
+    .content {
         padding: 20px;
     }
 
