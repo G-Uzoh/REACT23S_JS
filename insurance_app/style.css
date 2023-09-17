@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:wght@400;500;600&display=swap");
+
+:root {
+    --blue: #3030e5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    list-style-type: none;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: silver;
+    padding: 0 20px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Shared utility styles */
+.hidden {
+    display: none;
+}
+
+/* Header styles */
+header {
+    background-color: var(--blue);
+    color: white;
+    width: 100vw;
+    padding: 10px;
+}
+
+
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Main content styles */
+form {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Responsive styles - apply to larger screens */
+@media (min-width: 768px) {
+    /* Header styles */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--blue);
+        color: white;
+        width: 100vw;
+        padding: 10px;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+    .menu ul {
+        display: flex;
+    }
+
+    .menu ul div {
+        background-color: transparent;
+        margin: 3px;
+        padding: 5px;
+        border: 1px solid white;
+        border-radius: 5px;
+        flex: 1;
+        text-align: center;
+    }
+
+    .menu a {
+        color: white;
+    }
+
+    main {
+        display: flex;
+        background-color: white;
+    }
+
+    /* Main content styles */
+    .content {
+        flex-basis: 65%;
+        background-color: green;
+        margin-right: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .side-view {
+        flex-basis: 35%;
+        background-color: red;
+        margin-left: 5px;
+        border-left: 1px solid black;
+    }
+
+    .content,
+    .side-view {
+        padding: 20px;
+    }
+
+    .customer-info,
+    .health-status,
+    .habits {
+        border-bottom: 1px solid black;
+        margin-bottom: 15px;
+    }
+
+    .customer-info form {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    label, input {
+        margin: 5px;
+        font-family: inherit;
+        font-size: inherit;
+    }
+    
+    input {
+        /* width: 350px; */
+        padding: 10px;
+    }
+    .healthy-habits,
+    .unhealthy-habits {
+        border-top: 1px dashed black;
+    }
+}

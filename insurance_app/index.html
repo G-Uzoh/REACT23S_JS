@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insurance app</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <header>
+        <h1>Company name</h1>
+        <nav class="menu hidden">
+          <ul>
+            <div>
+              <li><a href="#">Home</a></li>
+            </div>
+            <div>
+              <li><a href="#">Request insurance</a></li>
+            </div>
+            <div>
+              <li><a href="#">Products</a></li>
+            </div>
+            <div>
+              <li><a href="#">File a claim</a></li>
+            </div>
+            <div>
+              <li><a href="#">Service & Contact</a></li>
+            </div>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <div class="content">
+          <h2>Insurance application form</h2>
+          <div class="customer-info">
+            <h3>Customer information</h3>
+            <form id="customer-info">
+              <label for="name">Full name:</label>
+              <input
+                type="text"
+                name="info"
+                id="name"
+                placeholder="Enter your name"
+              />
+              <label for="age">Age:</label>
+              <input
+                type="number"
+                name="info"
+                id="age"
+                placeholder="Enter your age"
+              />
+            </form>
+          </div>
+          <div class="health-status">
+            <h3>Health status</h3>
+            <form id="health-status">
+              <label for="hypertension"
+                ><input type="checkbox" name="health" id="hypertension" />
+                Hypertension</label
+              >
+              <label for="sugar"
+                ><input type="checkbox" name="health" id="sugar" />High blood
+                sugar</label
+              >
+              <label for="overweight"
+                ><input
+                  type="checkbox"
+                  name="health"
+                  id="overweight"
+                />Overweight</label
+              >
+            </form>
+          </div>
+          <div class="habits">
+            <h3>Health habits</h3>
+            <div class="healthy-habits">
+              <h4>Good habits:</h4>
+              <form id="healthy">
+                <label for="exercise"
+                  ><input type="checkbox" name="habits" id="exercise" />Regular
+                  exercise</label
+                >
+                <label for="diet"
+                  ><input type="checkbox" name="habits" id="diet" />Healthy
+                  diet</label
+                >
+                <label for="sleep"
+                  ><input type="checkbox" name="habits" id="sleep" />Adequate
+                  sleep</label
+                >
+                <label for="stress"
+                  ><input type="checkbox" name="habits" id="stress" />Stress
+                  management</label
+                >
+                <label for="moderate-alcohol"
+                  ><input
+                    type="checkbox"
+                    name="habits"
+                    id="moderate-alcohol"
+                  />Moderate alcohol consumption</label
+                >
+                <label for="non-smoking">
+                  <input
+                    type="checkbox"
+                    name="habits"
+                    id="non-smoking"
+                  />Non-smoking</label
+                >
+              </form>
+            </div>
+            <div class="unhealthy-habits">
+              <h4>Unhealthy habits:</h4>
+              <form id="unhealthy">
+                <label for="smoking"
+                  ><input
+                    type="checkbox"
+                    name="unhealthy-habits"
+                    id="smoking"
+                  />Smoking</label
+                >
+                <label for="excess-alcohol"
+                  ><input
+                    type="checkbox"
+                    name="unhealthy-habits"
+                    id="excess-alcohol"
+                  />Excess alcohol consumption</label
+                >
+                <label for="lack-exercise"
+                  ><input
+                    type="checkbox"
+                    name="unhealthy-habits"
+                    id="lack-exercise"
+                  />Lack of exercise</label
+                >
+                <label for="poor-diet"
+                  ><input
+                    type="checkbox"
+                    name="unhealthy-habits"
+                    id="poor-diet"
+                  />Poor diet</label
+                >
+                <label for="inadequate-sleep"
+                  ><input
+                    type="checkbox"
+                    name="unhealthy-habits"
+                    id="inadequate-sleep"
+                  />Inadequate sleep</label
+                >
+              </form>
+            </div>
+          </div>
+        </div>
+        <section class="side-view">
+          <p id="score"></p>
+        </section>
+      </main>
+
+      <footer>
+        <p>Copyright © 2023. | All rights reserved.</p>
+      </footer>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
