@@ -19,7 +19,7 @@ body {
 }
 
 body {
-    background-color: silver;
+    background-color: whitesmoke;
     padding: 0 20px;
     line-height: 1.5;
     display: flex;
@@ -46,17 +46,33 @@ a {
 }
 
 /* Main content styles */
-form {
+.content,
+section {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    padding: 15px;
+}
+
+h2,
+h3,
+h4 {
+    margin: 5px auto;
+}
+
+input {
+    font-family: inherit;
+    font-size: inherit;
+    padding: 5px;
+    margin: 5px auto;
+    border: 1px solid gray;
+    border-radius: 4px;
 }
 
 /* Button styles */
 button {
     background-color: steelblue;
     color: white;
-    margin: 10px auto;
+    margin: 20px auto;
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -71,6 +87,9 @@ button:hover {
 
 /* Footer styles */
 footer {
+    background-color: var(--blue);
+    color: white;
+    padding: 5px;
     text-align: center;
     margin-top: 30px;
 }
@@ -120,11 +139,11 @@ footer {
     /* Main content styles */
     .content {
         width: 70%;
-        margin-right: 5px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         border: 1px solid black;
+        margin: 50px;
     }
 
     .content {
@@ -138,12 +157,6 @@ footer {
         margin-bottom: 15px;
     }
 
-    .customer-info form {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 15px;
-    }
-
     label, input {
         margin: 5px;
         font-family: inherit;
@@ -151,11 +164,18 @@ footer {
     }
     
     input {
-        /* width: 350px; */
         padding: 10px;
     }
     .healthy-habits,
     .unhealthy-habits {
         border-top: 1px dashed black;
+    }
+
+    /* Section styles */
+    section {
+        width: 70%;
+        border: 1px solid black;
+        margin: 100px;
+        padding: 20px;
     }
 }
