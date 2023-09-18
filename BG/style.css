@@ -2,9 +2,33 @@ body {
     background-image: linear-gradient(#ff0000, #74009e);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: white;
+    color: #333;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 50px;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+p {
+    margin: 50px auto;
+    text-align: center;
+}
+
+.colors input {
+    width: 60px;
+    margin: 0 10px;
+}
+
+label {
+    color: white;
+}
+
+.container {
+    background-color: antiquewhite;
+    border-radius: 5px;
+    padding: 10px;
+    width: 350px;
+    height: 95vh;
 }
 
 .directions {

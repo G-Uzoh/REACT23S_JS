@@ -11,121 +11,134 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <form>
-      <h1>Linear gradient generator</h1>
-      <h2>Colors</h2>
-      <input type="color" name="color1" id="color1" value="#ff0000" />
-      <input type="color" name="color2" id="color2" value="#74009e" />
-      <h2>Direction</h2>
-      <div class="directions">
-        <div class="direction">
-          <input
-            class="hidden"
-            type="radio"
-            name="direction"
-            id="to-bottom-right"
-            value="to bottom right"
-          />
-          <label for="to-bottom-right"
-            ><span class="material-symbols-outlined"> south_east </span></label
-          >
+    <div class="container">
+      <form>
+        <h1>Linear gradient generator</h1>
+        <h2>Colors</h2>
+        <div class="colors">
+          <input type="color" name="color1" id="color1" value="#ff0000" />
+          <input type="color" name="color2" id="color2" value="#74009e" />
         </div>
+        <h2>Direction</h2>
+        <div class="directions">
+          <div class="direction">
+            <input
+              class="hidden"
+              type="radio"
+              name="direction"
+              id="to-bottom-right"
+              value="to bottom right"
+              checked
+            />
+            <label for="to-bottom-right"
+              ><span class="material-symbols-outlined">
+                south_east
+              </span></label
+            >
+          </div>
 
-        <div class="direction">
-          <input
-            class="hidden"
-            type="radio"
-            name="direction"
-            id="to-bottom"
-            value="to bottom"
-          />
-          <label for="to-bottom"
-            ><span class="material-symbols-outlined"> south </span></label
-          >
-        </div>
+          <div class="direction">
+            <input
+              class="hidden"
+              type="radio"
+              name="direction"
+              id="to-bottom"
+              value="to bottom"
+            />
+            <label for="to-bottom"
+              ><span class="material-symbols-outlined"> south </span></label
+            >
+          </div>
 
-        <div class="direction">
-          <input
-            class="hidden"
-            type="radio"
-            name="direction"
-            id="to-bottom-left"
-            value="to bottom left"
-          />
-          <label for="to-bottom-left"
-            ><span class="material-symbols-outlined"> south_west </span></label
-          >
-        </div>
-        <div class="direction">
-          <input
-            class="hidden"
-            type="radio"
-            name="direction"
-            id="to-right"
-            value="to right"
-          />
-          <label for="to-right"
-            ><span class="material-symbols-outlined"> east </span></label
-          >
-        </div>
+          <div class="direction">
+            <input
+              class="hidden"
+              type="radio"
+              name="direction"
+              id="to-bottom-left"
+              value="to bottom left"
+            />
+            <label for="to-bottom-left"
+              ><span class="material-symbols-outlined">
+                south_west
+              </span></label
+            >
+          </div>
+          <div class="direction">
+            <input
+              class="hidden"
+              type="radio"
+              name="direction"
+              id="to-right"
+              value="to right"
+            />
+            <label for="to-right"
+              ><span class="material-symbols-outlined"> east </span></label
+            >
+          </div>
 
-        <div class="direction" style="background-color: transparent"></div>
+          <div class="direction" style="background-color: transparent"></div>
 
-        <div class="direction">
-          <input
-            class="hidden"
-            type="radio"
-            name="direction"
-            id="to-left"
-            value="to left"
-          />
-          <label for="to-left"
-            ><span class="material-symbols-outlined"> west </span></label
-          >
-        </div>
+          <div class="direction">
+            <input
+              class="hidden"
+              type="radio"
+              name="direction"
+              id="to-left"
+              value="to left"
+            />
+            <label for="to-left"
+              ><span class="material-symbols-outlined"> west </span></label
+            >
+          </div>
 
-        <div class="direction">
-          <input
-            class="hidden"
-            type="radio"
-            name="direction"
-            id="to-top-right"
-            value="to top right"
-          />
-          <label for="to-top-right"
-            ><span class="material-symbols-outlined"> north_east </span></label
-          >
-        </div>
+          <div class="direction">
+            <input
+              class="hidden"
+              type="radio"
+              name="direction"
+              id="to-top-right"
+              value="to top right"
+            />
+            <label for="to-top-right"
+              ><span class="material-symbols-outlined">
+                north_east
+              </span></label
+            >
+          </div>
 
-        <div class="direction">
-          <input
-            class="hidden"
-            type="radio"
-            name="direction"
-            id="to-top"
-            value="to top"
-          />
-          <label for="to-top"
-            ><span class="material-symbols-outlined"> north </span></label
-          >
-        </div>
+          <div class="direction">
+            <input
+              class="hidden"
+              type="radio"
+              name="direction"
+              id="to-top"
+              value="to top"
+            />
+            <label for="to-top"
+              ><span class="material-symbols-outlined"> north </span></label
+            >
+          </div>
 
-        <div class="direction">
-          <input
-            class="hidden"
-            type="radio"
-            name="direction"
-            id="to-top-left"
-            value="to top left"
-          />
-          <label for="to-top-left"
-            ><span class="material-symbols-outlined"> north_west </span></label
-          >
+          <div class="direction">
+            <input
+              class="hidden"
+              type="radio"
+              name="direction"
+              id="to-top-left"
+              value="to top left"
+            />
+            <label for="to-top-left"
+              ><span class="material-symbols-outlined">
+                north_west
+              </span></label
+            >
+          </div>
         </div>
-      </div>
-      <h2>CSS code:</h2>
-      <p id="code"></p>
-    </form>
+        <h2>CSS code:</h2>
+        <p id="code"></p>
+      </form>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
