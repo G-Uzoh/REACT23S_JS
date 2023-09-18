@@ -2,4 +2,27 @@ body {
     background-image: linear-gradient(#ff0000, #74009e);
     background-repeat: no-repeat;
     background-attachment: fixed;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 50px;
+}
+
+.directions {
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: repeat(3, 50px);
+    gap: 50px;
+}
+
+.direction {
+    background: navy;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    width: 85px;
+}
+
+.hidden {
+    display: none;
 }
