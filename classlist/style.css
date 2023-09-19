@@ -21,7 +21,12 @@ header {
     justify-content: space-between;
     padding: 20px;
     align-items: center;
-    position: relative;
+    position: sticky;
+    top: 0;
+}
+
+.bg {
+    background-color: white;
 }
 
 li {
@@ -32,6 +37,10 @@ header,
 section,
 footer {
     padding: 20px;
+}
+
+section {
+    scroll-margin-top: 60px;
 }
 
 p {
