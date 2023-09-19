@@ -21,6 +21,7 @@ header {
     justify-content: space-between;
     padding: 20px;
     align-items: center;
+    position: relative;
 }
 
 li {
@@ -39,12 +40,19 @@ p {
 
 .btn {
     border: none;
-    border-radius: 50px;
+    border-radius: 10px;
     box-shadow: none;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
     background-color: orange;
     font-family: inherit;
     font-size: inherit;
+}
+
+.mobile {
+    display: none;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
 }
 
 #back-to-top {
@@ -52,4 +60,32 @@ p {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
+}
+
+@media (max-width: 800px) {
+    body {
+        background-color: azure
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    ul.responsive {
+        display: block;
+        background-color: white;
+        position: absolute;
+        left: 0;
+        top: 70px;
+        width: 100%;
+    }
+
+    ul.responsive li {
+        display: block;
+        margin: 1rem;
+    }
 }
