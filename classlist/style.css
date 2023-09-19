@@ -36,3 +36,20 @@ footer {
 p {
     margin: 0.5rem 0;
 }
+
+.btn {
+    border: none;
+    border-radius: 50px;
+    box-shadow: none;
+    padding: 0.5rem 1rem;
+    background-color: orange;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+}
