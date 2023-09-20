@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:wght@400;500;600&display=swap");
+
+:root {
+    --dark-slateblue: #7269aa;
+    --light-gray: #d3d3d3;
+}
+
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: var(--light-gray);
+    font-size: 16px;
+}
+
+body {
+    padding: 90px 10px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Main content styles */
+.content {
+    height: 100%;
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: #fff;
+    text-shadow: 1px 1px 2px black, 0 0 1px darkblue, 0 0 2px blue;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#description {
+    font-size: 0.875rem;
+}
+
+label, textarea {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+}
+
+input {
+    width: 300px;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: inherit;
+    resize: none;
+    overflow: auto;
+}
+
+/* Answer display styles */
+.question-container,
+#description {
+    font-size: 0.75rem;
+    margin: 15px auto;
+}
+
+.answer-container {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 15px auto;
+    background-color: var(--dark-slateblue);
+    color: white;
+    border: 1px solid transparent;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px;
+    border-radius: 7px;
+    padding: 5px;
+    width: 100%;
+    max-width: 300px;
+}
+
+p {
+    text-align: center;
+}
+
+/* Button styles */
+.buttons {
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background-color: slategray;
+    color: white;
+    font-size: inherit;
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+button:hover {
+    cursor: pointer;
+    color: beige;
+    transform: scale(1.01);
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer styles */
+footer {
+    margin-top: 90px;
+    font-size: 0.875rem;
+}
+
+footer p {
+    margin-top: 10px;
+    text-align: center;
+}
+
+footer a {
+    color: teal;
+    text-decoration: none;
+}
+
+/* Responsive styles - defines the behavior of the application on larger screens. */
+@media (min-width: 768px) {
+    .content {
+        font-size: 1rem;
+        padding: 20px;
+        border: 1px solid black;
+        border-radius: 5px;
+        max-width: 400px;
+        box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    input {
+        width: 350px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    textarea {
+        width: 100%;
+    }
+
+    .answer-container {
+        max-width: 400px;
+    }
+}

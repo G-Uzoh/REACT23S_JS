@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decision Making App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="content">
+        <h1>Decision Demon</h1>
+        <p id="description">
+          Are you caught in a crossroads between different choices? Feel free to
+          tell us about it and we will help you make the right decision.
+        </p>
+
+        <div class="user-input">
+          <input type="text" id="question" placeholder="Ask your question" />
+        </div>
+
+        <div class="view">
+          <p class="question-container"></p>
+          <p class="answer-container hidden"></p>
+        </div>
+
+        <button type="button" onclick="displayAnswer()">Get help</button>
+      </div>
+    </main>
+
+    <footer>
+      <p>Copyright © George Uzoh 2023 | All Rights Reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
