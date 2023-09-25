@@ -3,6 +3,9 @@ const mobileMenuBtn = document.querySelector('.mobile');
 const navMenu = document.querySelector('nav ul');
 const menuItems = document.querySelectorAll('nav ul li a');
 const header = document.querySelector('header');
+const modalBtn = document.querySelector('#warning-btn');
+const overlay = document.querySelector('.modal-overlay');
+const closeBtn = document.querySelector('#modal-btn-close');
 
 // Scroll event on window.
 window.onscroll = function() {scrollFunction()};
@@ -26,5 +29,9 @@ const mobileMenu = () => {
     navMenu.classList.contains('responsive') ? navMenu.classList.remove('responsive') : navMenu.classList.add('responsive');
 }
 
+const showModal = () => overlay.classList.toggle('visible');
+
 toTopButton.addEventListener('click', backToTop);
 mobileMenuBtn.addEventListener('click', mobileMenu);
+modalBtn.addEventListener('click', showModal);
+closeBtn.addEventListener('click', showModal);
