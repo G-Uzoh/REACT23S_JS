@@ -71,6 +71,44 @@ p {
     right: 2rem;
 }
 
+.modal-overlay {
+    background-color: rgba(51, 51, 51, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.modal-contents {
+    background-color: white;
+    margin: 2rem;
+    padding: 1rem;
+    max-width: 600px;
+    position: relative;
+}
+
+.modal-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.modal-btn {
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.modal button:hover {
+    cursor: pointer;
+}
+
 @media (max-width: 800px) {
     body {
         background-color: azure
